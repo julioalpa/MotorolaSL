@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace MotorolaSL\Providers;
 
-use App\Composers\CurrentUserComposer;
+use MotorolaSL\Composers\CurrentUserComposer;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\ServiceProvider;
 

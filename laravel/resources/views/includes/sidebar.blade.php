@@ -1,8 +1,4 @@
-<ul>
-    @if($currentUser)
-        Usuario: {{ $currentUser->name }} <li><a href="{{ route('auth_destroy_path') }}">Salir</a></li>
-    @else
-        <li><a href="{{ route('auth_show_path') }}">Login</a></li>
-    @endif
+<ul class="list-group">
+    <li class="list-group-item"><a href="{{ route('home_show_path') }}">Home</a></li>
 </ul>
 

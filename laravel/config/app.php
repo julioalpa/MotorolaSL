@@ -52,7 +52,9 @@ return [
     |
     */
 
+
     'locale' => 'es',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -140,11 +142,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-        App\Providers\ViewComposerServiceProvider::class,
+        MotorolaSL\Providers\AppServiceProvider::class,
+        MotorolaSL\Providers\AuthServiceProvider::class,
+        MotorolaSL\Providers\EventServiceProvider::class,
+        MotorolaSL\Providers\RouteServiceProvider::class,
+        MotorolaSL\Providers\ViewComposerServiceProvider::class,
 
         /*
          * SkyDriver Service Providers...

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace MotorolaSL\Http\Controllers\Auth;
 
-use App\User;
+use MotorolaSL\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use MotorolaSL\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

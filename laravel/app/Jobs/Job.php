@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace MotorolaSL\Jobs;
 
 use Illuminate\Bus\Queueable;
 

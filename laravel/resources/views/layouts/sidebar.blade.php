@@ -5,23 +5,28 @@
 </head>
 <body>
 
-<header class="row">
-    @include('includes.header')
-</header>
 
-<div id="main" class="row">
 
+<div class="container-fluid">
+
+    <header class="row">
+        @include('includes.header')
+    </header>
+
+    <div class="row">
     <!-- sidebar content -->
-    <div id="sidebar" class="col s12 m3 l2">
+    <div id="sidebar" class="col-md-3">
         @include('includes.sidebar')
     </div>
 
     <!-- main content -->
-    <div id="content" class="col s12 m9 l10">
+    <div id="content" class="col-md-9">
         @yield('content')
     </div>
 
     </div>
+
+</div>
 
 {{--<footer class="row">
     @include('includes.footer')

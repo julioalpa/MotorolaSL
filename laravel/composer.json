@@ -20,7 +20,7 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "MotorolaSL\\": "app/"
         }
     },
     "autoload-dev": {

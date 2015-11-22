@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace MotorolaSL;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +10,6 @@ class Puesto extends Model
 
     public function ConfigLinea()
     {
-        return $this->belongsTo('App\ConfigLinea','ConfigLinea_id');
+        return $this->belongsTo('MotorolaSL\ConfigLinea','ConfigLinea_id');
     }
 }

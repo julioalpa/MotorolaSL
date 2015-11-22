@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace MotorolaSL;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +10,6 @@ class ConfigLinea extends Model
 
     public function Puesto()
     {
-        return $this->hasMany('App\Puesto');
+        return $this->hasMany('MotorolaSL\Puesto');
     }
 }

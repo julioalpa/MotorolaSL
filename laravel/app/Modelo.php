@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace MotorolaSL;
 
 use Illuminate\Database\Eloquent\Model;
 

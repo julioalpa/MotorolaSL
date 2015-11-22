@@ -1,16 +1,17 @@
 @extends('layouts.sidebar')
-
+@section('title') Home @endsection
 @section('content')
-    <div class="row">
-        <form class="col s12" method="post" action="{{ route('home_store_path') }}">
-            {{ csrf_field() }}
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea" name= "txtConsulta"></textarea>
-                    <label for="textarea1">IMEIs (uno debajo de otro)</label>
-                </div>
-            </div>
-            <button class="btn waves-effect waves-light" type="submit" name="boton">CONSULTAR</button>
-        </form>
+@include('partials.errors')
+
+<form method="post" action="{{ route('home_store_path') }}">
+    {{ csrf_field() }}
+
+    <div class="form-group">
+        <textarea id="textarea1" class="form-control" name= "consultaImeis"></textarea>
+        <label for="textarea1" class="label-info">IMEIs (uno debajo de otro)</label>
     </div>
+
+    <button class="btn waves-effect waves-light" type="submit" name="boton">CONSULTAR</button>
+</form>
+
 @endsection

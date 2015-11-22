@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace MotorolaSL\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use MotorolaSL\Http\Requests;
+use MotorolaSL\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
@@ -46,7 +46,7 @@ class AuthController extends Controller
         if (!Auth::attempt($request->only(['email','password'])))
         {
             return redirect()->route('auth_show_path')
-                ->withErrors('Usuario o contraseña inválidos')
+                ->withErrors('Usuario o contraseÃ±a invÃ¡lidos')
                 ->withInput();
         }
 
