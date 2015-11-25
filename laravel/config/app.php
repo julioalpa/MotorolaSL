@@ -149,10 +149,21 @@ return [
         MotorolaSL\Providers\ViewComposerServiceProvider::class,
 
         /*
-         * SkyDriver Service Providers...
+         * MAterialize Css...
          */
 
         'Skydiver\LaravelMaterializeCSS\MaterializeCSSServiceProvider',
+
+        /*
+         * Roles de Usuario
+         */
+
+        //'Zizaco\Entrust\EntrustServiceProvider',
+
+        /**
+         * Third Party Service Providers...
+         */
+        Bican\Roles\RolesServiceProvider::class,
 
     ],
 
@@ -202,6 +213,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+        //'Entrust' => 'Zizaco\Entrust\EntrustFacade',
 
     ],
 

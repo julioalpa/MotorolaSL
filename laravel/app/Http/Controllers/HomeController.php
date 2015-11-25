@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use MotorolaSL\Http\Requests;
 use MotorolaSL\TrazabilidadMotorola;
 
+
 class HomeController extends Controller
 {
     /**
