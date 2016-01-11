@@ -20,7 +20,7 @@
             @endif
 
             @foreach($array as $unit)
-                <td>{{$unit}}</td>
+                <td><center> {{$unit}} </center></td>
             @endforeach
             </tr>
         @endforeach
