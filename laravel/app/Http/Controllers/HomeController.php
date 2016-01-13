@@ -10,6 +10,7 @@ use MotorolaSL\Puesto;
 use Illuminate\Http\Request;
 use MotorolaSL\Http\Requests;
 use MotorolaSL\TrazabilidadMotorola;
+use MotorolaSL\TrazabilidadOld;
 
 
 class HomeController extends Controller
@@ -52,6 +53,13 @@ class HomeController extends Controller
         foreach ($imeis as $imei)
         {
             $unidad = TrazabilidadMotorola::where('Codigo',$imei)->get();
+            $old = false;
+
+            if ($unidad->isEmpty())
+            {
+                $unidad = TrazabilidadOld::where('Codigo', $imei)->get();
+                $old = true;
+            }
 
             if (!$unidad->isEmpty() && $imei != '')
             {
@@ -72,10 +80,20 @@ class HomeController extends Controller
 
                 if ($codigoPuestoSimLock!=null) {
 
-                    $trazabilidadUnidad = TrazabilidadMotorola::where([
-                        'Unidad_id' => $unidad->first()->Unidad_id,
-                        'CodigoPuesto_id' => $codigoPuestoSimLock->Id
-                    ])->get();
+                    if ($old)
+                    {
+                        $trazabilidadUnidad = TrazabilidadOld::where([
+                            'Unidad_id' => $unidad->first()->Unidad_id,
+                            'CodigoPuesto_id' => $codigoPuestoSimLock->Id
+                        ])->get();
+                    }
+                    else
+                    {
+                        $trazabilidadUnidad = TrazabilidadMotorola::where([
+                            'Unidad_id' => $unidad->first()->Unidad_id,
+                            'CodigoPuesto_id' => $codigoPuestoSimLock->Id
+                        ])->get();
+                    }
 
                     $completeUnits->add($this->setUnitsCollection($imei, $trazabilidadUnidad, $modeloInfo));
                 }
